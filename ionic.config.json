@@ -1,0 +1,7 @@
+{
+  "name": "EAN13",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
