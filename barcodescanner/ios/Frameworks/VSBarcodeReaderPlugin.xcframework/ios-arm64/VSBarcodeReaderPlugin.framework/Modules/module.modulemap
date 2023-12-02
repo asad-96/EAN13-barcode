@@ -1,0 +1,11 @@
+framework module VSBarcodeReaderPlugin {
+  umbrella header "VSBarcodeReaderPlugin.h"
+  export *
+
+  module * { export * }
+}
+
+module VSBarcodeReaderPlugin.Swift {
+  header "VSBarcodeReaderPlugin-Swift.h"
+  requires objc
+}
