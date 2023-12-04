@@ -2,3 +2,14 @@ ion-button {
   padding-left: 10px;
   padding-right: 10px;
 }
+.show-bg {
+  --background: white;
+  --ion-background-color: white;
+}
+.hide-bg {
+  --background: transparent;
+  --ion-background-color: transparent;
+}
+body {
+  background: transparent;
+}

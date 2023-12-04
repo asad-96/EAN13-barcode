@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Items List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row *ngIf="loading; else showList">
+    <ion-col class="center" size="12">
+      <ion-spinner></ion-spinner>
+    </ion-col>
+
+  </ion-row>
+
+  <ng-template #showList>
+
+    <ion-row>
+      <ion-col size="4">
+        <b>Name</b>
+      </ion-col>
+      <ion-col size="4">
+        <b>Date</b>
+      </ion-col>
+      <ion-col size="4">
+        <b>Price</b>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-list lines="full" *ngFor="let item of itemList">
+
+      <ion-row>
+        <ion-col size="4">
+          {{item.Entity_commercial_name}}
+        </ion-col>
+        <ion-col size="4">
+          {{item.Date}}
+        </ion-col>
+        <ion-col size="4">
+          {{item.Price}}
+        </ion-col>
+      </ion-row>
+      <hr />
+
+    </ion-list>
+  </ng-template>
+</ion-content>

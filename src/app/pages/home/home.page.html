@@ -6,11 +6,19 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [ngClass]="{'show-bg': !isScanActive, 'hide-bg': isScanActive,  }">
 
   <ion-grid>
     <ion-col>
+      @if (!isScanActive) {
       <ion-button (click)="startScan()" expand="full">Scan QR</ion-button>
+      }
+      @else{
+      <ion-button (click)="stopScan()" expand="full">Stop QR</ion-button>
+      }
+
+
+
     </ion-col>
   </ion-grid>
 </ion-content>
